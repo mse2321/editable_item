@@ -23,6 +23,7 @@
 				element.on('click', function(){
 					$scope.$apply(function(){
 						// fire the onClick function
+						$scope.$eval(attrs.myClick);
 					});
 				});
 			}
@@ -38,8 +39,8 @@
 				<header>
 				</header>
 				<section>
-					<div class="item" make-editable>
-  						<p>Content that will become editable when the directive rendered.</p>
+					<div class="item">
+  						<p make-editable>Content that will become editable when the directive rendered.</p>
   						<button id="edit_button">Edit</button>
 					</div>
 				</section>
